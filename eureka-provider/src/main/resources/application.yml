@@ -1,0 +1,26 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://euk1.com:7901/eureka/
+    healthcheck:
+      enabled: true
+spring:
+  application:
+    name: provider
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+---
+server:
+  port: 80
+eureka:
+  instance:
+    hostname: provider-80
+---
+server:
+  port: 81
+eureka:
+  instance:
+    hostname: provider-81

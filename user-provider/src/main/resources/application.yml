@@ -1,0 +1,29 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://euk1.com:7901/eureka/
+    healthcheck:
+      enabled: true
+spring:
+  application:
+    name: user-provider
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      rate: 1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+---
+server:
+  port: 89
+---
+server:
+  port: 88
+
+
+

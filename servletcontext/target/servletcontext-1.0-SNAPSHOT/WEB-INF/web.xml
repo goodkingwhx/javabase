@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <context-param>
+        <param-name>bj</param-name>
+        <param-value>beijing</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>servletcontext</servlet-name>
+        <servlet-class>com.example.servletcontext.ServletContextServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletcontext</servlet-name>
+        <url-pattern>/sc</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>servletcontext2</servlet-name>
+        <servlet-class>com.example.servletcontext.ServletContextServlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletcontext2</servlet-name>
+        <url-pattern>/sc2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>num</servlet-name>
+        <servlet-class>com.example.num.NumServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>num</servlet-name>
+        <url-pattern>/num</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,39 @@
+eureka:
+  client:
+    #register-with-eureka: false
+    #fetch-registry: false
+    service-url:
+      defaultZone: http://euk1.com:7901/eureka/,http://euk2.com:7902/eureka/
+  instance:
+    metadata-map:
+      dalao: 'mashibing'
+
+spring:
+  application:
+    name: EurekaServer
+  boot:
+    admin:
+      client:
+        url: http://localhost:10010
+management:
+  endpoint:
+    health:
+      show-details: always
+---
+spring:
+  profiles:
+    active: 7901
+server:
+  port: 7901
+eureka:
+  instance:
+    hostname: euk1.com  #hostname??????
+---
+spring:
+  profiles:
+    active: 7902
+server:
+  port: 7902
+eureka:
+  instance:
+    hostname: euk2.com  #hostname??????
